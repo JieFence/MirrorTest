@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\ParrelSync\Examples\CustomArgumentExample.cs" />
+     <Compile Include="Assets\MyScripts\MySever.cs" />
+     <Compile Include="Assets\MyScripts\PlayerController.cs" />
      <None Include="Assets\ScriptTemplates\51-Mirror__Network Authenticator-NewNetworkAuthenticator.cs.txt" />
      <None Include="Assets\ScriptTemplates\56-Mirror__Network Discovery-NewNetworkDiscovery.cs.txt" />
      <None Include="Assets\Mirror\Version.txt" />
@@ -275,17 +277,17 @@
     <Reference Include="UnityEditor.UnityConnectModule">
         <HintPath>D:\unity专属盘\Unity\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CecilX">
-        <HintPath>R:\ProjectRepository\UnityProject\unityProjects\MirrorTest\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX.Rocks">
         <HintPath>R:\ProjectRepository\UnityProject\unityProjects\MirrorTest\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Rocks.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CecilX.Mdb">
-        <HintPath>R:\ProjectRepository\UnityProject\unityProjects\MirrorTest\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX.Pdb">
         <HintPath>R:\ProjectRepository\UnityProject\unityProjects\MirrorTest\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX">
+        <HintPath>R:\ProjectRepository\UnityProject\unityProjects\MirrorTest\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.CecilX.Mdb">
+        <HintPath>R:\ProjectRepository\UnityProject\unityProjects\MirrorTest\Assets\Mirror\Plugins\Mono.Cecil\Mono.CecilX.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:\unity专属盘\Unity\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
@@ -664,9 +666,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ParrelSync.csproj">
-      <Project>{221b0b17-7f24-2468-be9c-2532aa5dd8d5}</Project>
-      <Name>ParrelSync</Name>
+    <ProjectReference Include="Mirror.csproj">
+      <Project>{72577d93-8bb8-f69e-c444-bea26aef1f64}</Project>
+      <Name>Mirror</Name>
     </ProjectReference>
     <ProjectReference Include="kcp2k.csproj">
       <Project>{74625600-5138-4e6c-5611-20b61b56e0f8}</Project>
@@ -675,18 +677,6 @@
     <ProjectReference Include="Mirror.Editor.csproj">
       <Project>{4bc3b8ba-5a55-5448-4d65-296e7cb04d67}</Project>
       <Name>Mirror.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="where-allocations.csproj">
-      <Project>{a31d35a9-acf3-291a-beb0-a4239252d21b}</Project>
-      <Name>where-allocations</Name>
-    </ProjectReference>
-    <ProjectReference Include="Telepathy.csproj">
-      <Project>{734c497c-9999-f49c-d534-ab37cb136a08}</Project>
-      <Name>Telepathy</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Components.csproj">
-      <Project>{60bf423a-c4d1-fa5f-f577-e45079abd470}</Project>
-      <Name>Mirror.Components</Name>
     </ProjectReference>
     <ProjectReference Include="Mirror.Examples.csproj">
       <Project>{be120fe8-1491-4409-2841-cd37e7ce1d22}</Project>
@@ -700,13 +690,25 @@
       <Project>{5a64a3eb-0b8e-febe-734b-c5ee358a41ca}</Project>
       <Name>Mirror.Authenticators</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.csproj">
-      <Project>{72577d93-8bb8-f69e-c444-bea26aef1f64}</Project>
-      <Name>Mirror</Name>
+    <ProjectReference Include="Telepathy.csproj">
+      <Project>{734c497c-9999-f49c-d534-ab37cb136a08}</Project>
+      <Name>Telepathy</Name>
+    </ProjectReference>
+    <ProjectReference Include="where-allocations.csproj">
+      <Project>{a31d35a9-acf3-291a-beb0-a4239252d21b}</Project>
+      <Name>where-allocations</Name>
     </ProjectReference>
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{c155ac16-96d1-63c3-8fba-f55bcb277759}</Project>
       <Name>SimpleWebTransport</Name>
+    </ProjectReference>
+    <ProjectReference Include="Mirror.Components.csproj">
+      <Project>{60bf423a-c4d1-fa5f-f577-e45079abd470}</Project>
+      <Name>Mirror.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="ParrelSync.csproj">
+      <Project>{221b0b17-7f24-2468-be9c-2532aa5dd8d5}</Project>
+      <Name>ParrelSync</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
